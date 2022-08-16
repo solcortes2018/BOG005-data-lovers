@@ -1,9 +1,4 @@
-
-
 import data from './data/pokemon/pokemon.js'; //trajimos la data en console log
-let pokemon = Object.values(data.pokemon);
-
-console.log(data);
 
 let beginning= document.getElementById ("beginning");
 beginning.addEventListener ("click",changeViewBeginning);
@@ -18,17 +13,14 @@ function changeViewBeginning() {
 }
 
 function changeViewPokedexButton() {
-    document.getElementById("containerOne","containerTwo").style.display = "none";
-    document.getElementById("containerThree").style.display = "block";
-}
-
-function changeViewTypesButton() {
     document.getElementById("containerOne","containerThree").style.display = "none";
     document.getElementById("containerTwo").style.display = "block";
 }
 
-import pokemon from './data/pokemon/pokemon.js';
-import data from './data/pokemon/pokemon.js';
+function changeViewTypesButton() {
+    document.getElementById("containerOne","containerTwo").style.display = "none";
+    document.getElementById("containerThree").style.display = "block";
+}
 
 
 console.log(data);
