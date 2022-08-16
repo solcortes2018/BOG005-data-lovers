@@ -1,5 +1,4 @@
 
-//import {example} from './data.js';
 import data from './data/pokemon/pokemon.js'; //trajimos la data en console log
 let pokemon = Object.values(data.pokemon);
 
@@ -36,29 +35,28 @@ console.log(data);
 
 let infoPokemon = Object.values(data.pokemon);
 
-function showData(datos) {
+function showData(data) {
     for (let i = 0; i < pokemon.length; i++){
         let namePokemon = pokemon[i].name;
-        let imagenPokemon = pokemon[i].img;
-        let contenedor = document.querySelector(".contenedor");
+        let imagePokemon = pokemon[i].img;
+        console.log(imagePokemon);
+        let showBox = document.querySelector("showBox");
         let info = document.createElement("div");
         contenedor.appendChild(info)
         info.innerHTML= `
                 <img src= "${imagenpokemon}"></img>
         <p>${namePokemon}</p>
         `
-        
-      
     }
 }
-window.addEventListener("load",showData(pokemon));
+window.addEventListener("load", showData(pokemon))
 
 
-const menuPokebook =  {
+///const menuPokebook =  {
 ///    home: mainPage,
 ///    Pokedex: secondPage,
 ///    Types: thirdPage,
-}
+///}
 
 function mainPage (){
     document.getElementById("homePage").style.display = "none";
@@ -71,3 +69,4 @@ document.getElementById("mainMenu").addEventListener("change", function(){
     stringmenu = parseInt(stringmenu);
     console.log(stringmenu);
 })
+
