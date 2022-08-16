@@ -4,23 +4,16 @@
 }
 header {
     width: 100%;
-<<<<<<< HEAD
     height: 50px;
     background-color: #127E6E;
     display: table;
 }
 
-=======
-    height: 30px;
-    background-color: #127E6E;
- 
-}
->>>>>>> 1acc4eb6485f2d3275ca6680b3b9a7cc4296c220
 nav{ 
     background-color: #127E6E;
     position: relative;
     display: flex;
-<<<<<<< HEAD
+
     line-height: 55px;
     float: right;
 }
@@ -60,31 +53,11 @@ body{
 footer{
     margin-top: 57px;
     height: 90px;
-=======
-    justify-content: right;
-}
-
-
-
-body{
-    background: url(fondo_pokebook.jpeg);
-}
-
-
-
-
-
-
-
-footer{
-    margin-top: 57px;
-    height: 55px;
->>>>>>> 1acc4eb6485f2d3275ca6680b3b9a7cc4296c220
     width: 100%;
     position: absolute;
     background-color: #127E6E;
 }
-<<<<<<< HEAD
+
 
 footer p {
     font-family: "calibri";
@@ -102,29 +75,4 @@ footer .networkIcon {
     margin-right:auto;
     display: flex;
     width: 2px;
-    height: 2px;
-=======
-footer p {
-    font-family: "calibri";
-    font-size: 16px;
-    padding-top: 15px;
-    padding-left: 15px;
-    text-align: center;
-    font-weight: bold;
-    letter-spacing: 5px;
-    justify-content: space-between;
-}
-
-
-footer .networkIcon {
-    float: center;
-    padding: 5px 3px 4px 3px;
-}
-
-
-.showBox {
-    width: 80%;
-    height: 80%;
-    background-color: blue;
->>>>>>> 1acc4eb6485f2d3275ca6680b3b9a7cc4296c220
-}
+    height: 2px;}
