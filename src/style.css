@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    width: 100%;
+    height: 30px;
+    background-color: #127E6E;
+ 
+}
+nav{ 
+    background-color: #127E6E;
+    position: relative;
+    display: flex;
+    justify-content: right;
+}
+
+
+
+body{
+    background: url(fondo_pokebook.jpeg);
+}
+
+
+
+
+
+
+
+footer{
+    margin-top: 57px;
+    height: 55px;
+    width: 100%;
+    position: absolute;
+    background-color: #127E6E;
+}
+footer p {
+    font-family: "calibri";
+    font-size: 16px;
+    padding-top: 15px;
+    padding-left: 15px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 5px;
+    justify-content: space-between;
+}
+
+
+footer .networkIcon {
+    float: center;
+    padding: 5px 3px 4px 3px;
+}
+
+
+
+#page2Pokedex {
+    display:none;
+
+}
+
+#page3TiposdePokemon {
+    display: none
+}
