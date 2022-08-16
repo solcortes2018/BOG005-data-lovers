@@ -52,12 +52,8 @@ footer .networkIcon {
 }
 
 
-
-#page2Pokedex {
-    display:none;
-
-}
-
-#page3TiposdePokemon {
-    display: none
+.showBox {
+    width: 80%;
+    height: 80%;
+    background-color: blue;
 }
