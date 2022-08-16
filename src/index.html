@@ -5,37 +5,38 @@
   <meta charset="utf-8">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="main.js" type="module"></script>
 </head>
 <header>
+  <!--<img class="pokebook" src="pokebook.jpg" alt="Pokebook" id="logoImage">-->
+  <nav>
+    <!--<select name="Menú" id="menu">
+      <option id="beginning" value="00">Menú</option>
+      <option value="01">Inicio</option>
+      <option id="pokedexBottom " value="02">Pokedex</option>
+      <option value="03">Tipos de Pokémon</option>
+    </select>-->
+    <a href = "#" id="beginning">Inicio</a>
+    <a href="#" id="pokedexButton">Pokedex</a>
+    <a href="#" id="typesButton">Tipos de Pokémon</a>
+  </nav>
   
-  <!-- <img class="pokebook" src="" alt="Pokebook" id="logoImage">-->
 </header>
-<nav>
-  <select name="Menú" id="menu">
-    <option value="00">Menú</option>
-    <option value="01">Inicio</option>
-    <option value="02">Pokedex</option>
-    <option value="03">Tipos de Pokémon</option>
-  </select>
-</nav>
+
 
 <body>
-  <section class="containerOne">
+  <section class="containerOne" id="containerOne">
     <div class="togepi"><img src="toggepi.gif" alt="toggepi"> </div>
     <button class="pokedex">POKEDEX</button>
-  </section>
 
-  <div id="root"></div>
-  <script src="main.js" type="module"></script>
-
-  <section class="containerTwo">
     <div class="titleOne">!Descubre cuál seria tu</div>
     <div class="titleTwo">primer pokémon!</div>
-    <!--<img class ="ashPikachu "src="" alt="ashPikachu">-->
+    <img class ="ashPikachu "src="ash_pikachu.jpg" alt="ashPikachu" width="100%" height="80%">
   </section>
 
-  <section class="containerThree">
-    <select name="Types" id="Types">
+  <section class="containerTwo" id="containerTwo">
+
+  <select name="Types" id="Types">
       <option value="00">Tipos de Pokémon</option>
       <option value="01">Tipo Agua</option>
       <option value="02">Tipo Bicho</option>
@@ -54,6 +55,10 @@
       <option value="15">Tipo Volador</option>
     </select>
   </section>
+
+  <section class="containerThree" id="containerThree">
+   <p>pokemon</p>
+  </section>
  </body>
  <footer>
   <p>BY NATA & SOL</p>
@@ -63,4 +68,6 @@
   <a href="#" class="iconTwitter"><img id="icon" src="icocno_twitter.png" alt="iconTwitter"></a>
   </div>
 </footer>
+<div id="root"></div>
+  
 </html>
