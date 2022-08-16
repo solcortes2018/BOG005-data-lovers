@@ -7,17 +7,14 @@ header {
     height: 50px;
     background-color: #127E6E;
     display: table;
-    
- 
 }
+
 nav{ 
     background-color: #127E6E;
     position: relative;
     display: flex;
     line-height: 55px;
     float: right;
-    
-    
 }
 
 nav a{
@@ -28,9 +25,8 @@ nav a{
     transition: 0.6s;
     padding-bottom: 0px 2px;
     color: #F7E300;
+    justify-content: right;
 }
-
-
 
 body{
     background: url(fondo_pokebook.jpeg);
@@ -45,8 +41,6 @@ body{
     text-align: center;
 }
 
-
-
 .containerTwo{
     display: none;
 }
@@ -55,9 +49,6 @@ body{
     display: none;
 }
 
-
-
-
 footer{
     margin-top: 57px;
     height: 90px;
@@ -65,6 +56,7 @@ footer{
     position: absolute;
     background-color: #127E6E;
 }
+
 footer p {
     font-family: "calibri";
     font-size: 16px;
@@ -76,12 +68,10 @@ footer p {
     justify-content: space-between;
 }
 
-
 footer .networkIcon {
    margin-left:auto;
     margin-right:auto;
     display: flex;
     width: 2px;
     height: 2px;
-
 }
