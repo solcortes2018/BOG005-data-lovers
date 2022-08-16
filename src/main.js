@@ -2,7 +2,7 @@
 import data from './data/pokemon/pokemon.js'; //trajimos la data en console log
 let pokemon = Object.values(data.pokemon);
 
-console.log(data);
+console.log(pokemon);
 
 let beginning= document.getElementById ("beginning");
 beginning.addEventListener ("click",changeViewBeginning);
