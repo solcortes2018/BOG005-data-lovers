@@ -1,6 +1,7 @@
-
+//import {example} from './data.js';
 import data from './data/pokemon/pokemon.js'; //trajimos la data en console log
 
+console.log(pokemon);
 
 let beginning= document.getElementById ("beginning");
 beginning.addEventListener ("click",changeViewBeginning);
@@ -13,6 +14,7 @@ function changeViewBeginning() {
     document.getElementById("containerTwo","containerThree").style.display = "none";
     document.getElementById("containerOne").style.display = "block";
 }
+
 
 function changeViewPokedexButton() {
     document.getElementById("containerOne","containerThree").style.display = "none";
