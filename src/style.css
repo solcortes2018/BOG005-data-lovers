@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial;
 }
 
 header {
@@ -47,17 +47,19 @@ nav a {
 }
 
 
-body {
-    background: url(fondo_pokebook.jpeg);
-    width: 100%;
+body{
+    background: url(css/fondo_pokebook.jpeg);
+    width:100% ;
     height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
-.containerOne {
-    display: none;
-    margin-left: auto;
-    margin-right: auto;
+.containerOne{
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
     text-align: center;
 }
 
@@ -113,12 +115,16 @@ footer .networkIcon {
 #headerPokedex {
     position: fixed 100%;
     background-color: #fae478;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #pokedexNavigator {
     background-color: #fae478;
     justify-content: space-between;
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 option hover {
@@ -134,4 +140,25 @@ option hover {
     background-color: #69A6B3;
     width: 100%;
     height: 30em;
+    position: fixed;
+}
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 60px;
+    padding: 2%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.pokedexButton {
+    background-color: #127E6E;
+    font: impact;
+    font-size: 30px;
+    padding: 30px;
+    border-radius: 50px;
+    border-color: aliceblue;
+}
+
+#pag1Sec2 {
+    display: flexbox;
 }
