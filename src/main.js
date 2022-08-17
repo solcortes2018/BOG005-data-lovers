@@ -1,5 +1,5 @@
 
-import data from './data/pokemon/pokemon.js'; //trajimos la data en console log
+import data from './data/pokemon/pokemon.js'; //trajimos la data en console log prueba #1
 
 
 let beginning= document.getElementById ("beginning");
@@ -30,17 +30,27 @@ console.log(data);
 let infoPokemon = Object.values(data.pokemon);
 
 function showData(infoPokemon) {
-    for (let i = 0; i < infoPokemon.length; i++){
+    for (let i = 0; i < infoPokemon.length; i++ ){
         let namePokemon = infoPokemon[i].name;
+        let createNameForPokemon=document.createTextNode(namePokemon);
+        ///console.log(namePokemon);
         let imagePokemon = infoPokemon[i].img;
-        console.log(namePokemon);
-        let showBox = document.querySelector("selectorBox");
-        let info = document.createElement("div");
-        selectorBox.appendChild(info)
-        infoPokemon.innerHTML= `
-                <img src= "${imagenpokemon}"></img>
-        <p>${namePokemon}</p>
-        `
+        console.log(imagePokemon);
+        ///let createImageForPokemon=document.createElement(imagePokemon);
+
+        let showBox = document.querySelector(".selectorBox");
+        let createInfo = document.createElement("div");
+
+        showBox.appendChild(createInfo);
+        createInfo.appendChild(createNameForPokemon);
+       /// createInfo.appendChild(createImageForPokemon);
+       
+        
+        
+       // infoPokemon.innerHTML= `
+       //         <img src= "${imagePokemon}"></img>
+        ///<p>${namePokemon}</p>
+       /// `
     }
 }
-window.addEventListener("load", showData(data))
+window.addEventListener("load", showData(infoPokemon));
