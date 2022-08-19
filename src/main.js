@@ -63,10 +63,8 @@ template(dataPoke);
         let imagePokemon = infoPokemon[i].img;
         console.log(imagePokemon);
         ///let createImageForPokemon=document.createElement(imagePokemon);
-
         let showBox = document.querySelector(".selectorBox");
         let createInfo = document.createElement("div");
-
         showBox.appendChild(createInfo);
         createInfo.appendChild(createNameForPokemon);//
        /// createInfo.appendChild(createImageForPokemon);
