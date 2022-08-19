@@ -2,6 +2,8 @@
 import data from './data/pokemon/pokemon.js'; //trajimos la data en console log prueba #1
 
 
+console.log(pokemon);
+
 let beginning= document.getElementById ("beginning");
 beginning.addEventListener ("click",changeViewBeginning);
 let pokedexButton= document.getElementById("pokedexButton");
@@ -37,21 +39,21 @@ function showData(infoPokemon) {
         ///console.log(namePokemon);
         let imagePokemon = infoPokemon[i].img;
         console.log(imagePokemon);
-        ///let createImageForPokemon= (document.createElement(`<img src= "${imagePokemon}"></img>`));
+        ///let createImageForPokemon=document.createElement(imagePokemon);
+
         let showBox = document.querySelector(".selectorBox");
         let createInfo = document.createElement("div");
 
         showBox.appendChild(createInfo);
-        createInfo.innerHTML=`
-        <img src= "${imagePokemon}"></img>
-        `
         createInfo.appendChild(createNameForPokemon);
+       /// createInfo.appendChild(createImageForPokemon);
+       
+        
+        
+       // infoPokemon.innerHTML= `
+       //         <img src= "${imagePokemon}"></img>
+        ///<p>${namePokemon}</p>
+       /// `
     }
 }
 window.addEventListener("load", showData(infoPokemon));
-
-document.getSelection("div").addEventListener("click", function(){
-
-    
-}
-)
