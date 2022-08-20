@@ -1,54 +1,55 @@
-<<! DOCTYPE html>
-<HTML>
+<!DOCTYPE html>
+<html>
 
-<cabeza>
+<head>
   <meta charset="utf-8">
-  <título> Amantes de los datos</title>
-  <link rel="hoja de estilo" href="estilo.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
   <script src="main.js" type="module"></script>
-</cabeza>
-<encabezado>
+</head>
+<header>
   <img src="css/POKEBOOK.png" id="imagenPokebook">
-  <Nav>
-    <!--<seleccione nombre="Menú" id="menu">
+  <nav>
+    <!--<select name="Menú" id="menu">
       <option id="beginning" value="00">Menú</option>
       <option value="01">Inicio</option>
       <option id="pokedexBottom " value="02">Pokedex</option>
- <valor de opción="03">Tipos de Pokémon</option>
- </seleccionar>-->
+      <option value="03">Tipos de Pokémon</option>
+    </select>-->
     <a href = "#" id="beginning">Inicio</a>
     <a href="#" id="pokedexButton">Pokedex</a>
     <a href="#" id="typesButton">Encuentra tu pokemon</a>
-  </Nav>
+  </nav>
   
-</encabezado>
+</header>
 
 
-<cuerpo>
+<body>
   <!--Pagina inicio-->
   <section class="containerOne" id="containerOne">
-    <artículo>
-      <h1>¿Quieres conocer más sobre tus pokemon favoritos? </h1>
-      <h2>¡Aprende sobre sus características, curiosidades, tipos y formas de ataque y conviertete en un maestro pokemon! </h2>
+    <article>
+      <h1>¿Quieres conocer más sobre tus pokemon favoritos?</h1>
+      <h2>¡Aprende sobre sus características, curiosidades, tipos y formas de ataque y conviertete en un maestro pokemon!</h2>
       <article class="togepi"><img src="css/toggepi.gif" alt="toggepi"> </article>
       <button class="pokedexButton">POKEDEX</button>
-    </artículo>
-    <id de artículo="Pag1Sec2">
-      <h1>! Descubre cuál seria tu primer pokémon! </h1>
+    </article>
+    <article id="Pag1Sec2">
+      <h1>!Descubre cuál seria tu primer pokémon!</h1>
       <img class ="ashPikachu "src="css/ash_pikachu.png" alt="ashPikachu" width="60%" height="60%">
-    </artículo>
+    </article>
  
-  </sección>
+  </section>
 
 
   <!--Página Pokedex-->
   <section class="containerTwo" id="containerTwo">
-    <artículo id="headerPokedex">
+    <article id="headerPokedex">
       <img src="css/Pokedex.png" id="imagenPokedex">
-      <h2>¡Encuentra tus pokemon favoritos! </h2>
+      <h2>¡Encuentra tus pokemon favoritos!</h2>
       <nav id="pokedexNavigator">
         <h2>Tipos de Pokemon</h2>
-        <select name="Types" id="Tipos">
+        <select name="Types" id="Types">
           <option value="00">Tipo Volador</option>
           <option value="01">Tipo Agua</option>
           <option value="02">Tipo Bicho</option>
@@ -83,26 +84,25 @@
 
   <section class="containerThree" id="containerThree">
    <p>pokemon</p>
-   <div id="targetPokemon"></div>
    <p>Elementos de prueba </p>
 
 
 
-  </sección>
+  </section>
 
 
 
 
 
- </cuerpo>
- <pie de página>
-  <p>POR NATA & SOL</p>
+ </body>
+ <footer>
+  <p>BY NATA & SOL</p>
   <div class="networkIcon">
   <a href="#" class="iconFacebook" ><img id="icon" src="css/icono_facebook.png" alt="iconFacebook"></a>
   <a href="#" class="iconInstagram"><img id="icon" src="css/icono_instagram.png" alt="iconInstagram"></a>
   <a href="#" class="iconTwitter"><img id="icon" src="css/icocno_twitter.png" alt="iconTwitter"></a>
-  </Div>
-</pie de página>
+  </div>
+</footer>
 <div id="root"></div>
   
-</HTML>
+</html>

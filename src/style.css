@@ -161,3 +161,11 @@ div img {
     display:inline-table;
     
 }
+
+.stylePokemon{
+    display: flex;
+}
+
+#namePokemon{
+    color: #F7E300;
+}
