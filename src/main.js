@@ -1,4 +1,4 @@
-
+import { organize } from './data.js'
 import data from './data/pokemon/pokemon.js'; //trajimos la data en console log prueba #1
 
 
@@ -64,3 +64,126 @@ window.addEventListener("load", showData(infoPokemon));
 document.getSelection("div").addEventListener("click", function(){ 
 }
 )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const toggleButton = document.getElementById('buttonMenu')
+const navWrapper = document.getElementById('nav')
+
+toggleButton.addEventListener('click',() => {
+  toggleButton.classList.toggle('close')
+  navWrapper.classList.toggle('show')
+})
+
+navWrapper.addEventListener('click',e => {
+  if(e.target.id === 'nav'){
+    navWrapper.classList.remove('show')
+    toggleButton.classList.remove('close')
+  }
+})

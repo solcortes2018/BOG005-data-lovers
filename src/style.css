@@ -1,9 +1,145 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: Arial;
+    margin: 0px;
+    padding: 0px;
+
 }
 
+.mainHeader{
+  width: 100%;
+  height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.4rem;
+    background-color: #127E6E;
+  }
+  .mainLogo{
+    block-size:70px;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration:none;
+    padding-top: 20px;
+    display: grid;
+    justify-content: space-evenly;
+  }
+  .mainNav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    margin-left: -100%;
+    transition: all .2s linear;
+    background-color: rgba(57, 223, 145, 0.7);;
+    z-index: 100;
+    line-height: 55px;
+    float: right;
+  }
+  .mainNav.show{
+    margin-left: 0;
+  }
+  .navLinks{
+    background-color: #127E6E;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .linkItem{
+    margin-top: 2rem;
+    color: #F7E300;
+    transition: 0.6ms;
+    padding-bottom: 0px 2px;
+    text-decoration: none;
+    font-family:'monserrat',sans-serif;
+    position: relative;
+    display: flex;
+    justify-content: right;
+  }
+  .linkItem::after {
+    position: absolute;
+    content: "";
+    background-color: #F7E300;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    transition: 0.3s ease all;
+  }
+  .linkItem:hover::after {
+    width: 100%;
+  }
+  .buttonMenu{
+    z-index: 200;
+    width: 40px;
+    height: 40px;
+    border: none;
+    display: flex;
+    background: none;
+    flex-direction: column; /*pondra un span debajo del otro*/
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .buttonMenu span{
+    width: 37px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #F7E300;
+    border-radius: 3px;
+    transform-origin: 4px 0px;
+    transition: all .2s linear; /*creamos la linea debajo de cada link*/
+  }
+  /*Con los span dibujamos la x para cerrar*/
+  .buttonMenu.close span {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 0px);
+    background: #127E6E;
+  }
+
+  .buttonMenu.close span:nth-child(2){
+    transform: rotate(-45deg) translate(-8px, 5px);
+  }
+  .buttonMenu.close span:nth-child(3){
+    display: none;
+  }
+  @media screen and (min-width:768px) {
+    .buttonMenu{
+      display: none;
+    }
+    .mainLogo{
+        flex-basis: 30%;
+      }
+
+      .mainNav{
+        position: static;
+        margin-left: 0;
+        flex-basis: 70%;
+        height: 100%;
+      }
+
+      .navLinks{
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        background: #127E6E;
+      }
+
+      .linkItem{
+        display: inline-block;
+        margin-top: 0;
+        margin-right: 2rem;
+      }
+
+    }
+
+
+/*  
 header {
     width: 100%;
     height: 50px;
@@ -44,7 +180,7 @@ nav a {
     font-weight: 400;
     line-height: 54px;
     text-align: left;
-}
+}*/
 
 body{
     background: url(css/fondo_pokebook.jpeg);
@@ -166,6 +302,3 @@ div img {
     display: flex;
 }
 
-#namePokemon{
-    color: #F7E300;
-}
