@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="utf-8">
+  <!--caracteres especiales-->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--responsive-->
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,26 +16,35 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <script src="main.js" type="module"></script>
 </head>
-<header>
-  <img src="css/POKEBOOK.png" id="imagenPokebook">
-  <nav>
-    <!--<select name="Menú" id="menu">
+<header class="mainHeader">
+  <img src="css/POKEBOOK.png" id="imagenPokebook" class="mainLogo">
+  <nav id ="nav" class="mainNave">
+    <div class="navLinks">
+      <a href="#" id="beginning" class="linkItem">Inicio</a>
+      <a href="#" id="pokedexButton" class="linkItem">Pokedex</a>
+      <a href="#" id="typesButton" class="linkItem">Encuentra tu Pokémon</a>
+    </div>
+  </nav>
+  <button id="buttonMenu" class="buttonMenu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+<!--<select name="Menú" id="menu">
       <option id="beginning" value="00">Menú</option>
       <option value="01">Inicio</option>
       <option id="pokedexBottom " value="02">Pokedex</option>
       <option value="03">Tipos de Pokémon</option>
-    </select>-->
+    </select>
     <a href = "#" id="beginning">Inicio</a>
     <a href="#" id="pokedexButton">Pokedex</a>
-    <a href="#" id="typesButton">Encuentra tu pokemon</a>
-  </nav>
-  
-</header>
-
+    <a href="#" id="typesButton">Encuentra tu pokemon</a>-->
 
 <body>
   <!--Pagina inicio-->
   <section class="containerOne" id="containerOne">
+
     <article class="absolutePageHome">
       <h1 id="titleHome1">¿Quieres conocer más sobre tus pokemon favoritos?</h1>
       <br><br><br>
@@ -48,9 +59,10 @@
       <br><br><br>
     <article id="Pag1Sec2">
       <h1>!Descubre cuál seria tu primer pokémon!</h1>
+
       <img id="ashPikachu" src="css/ash_pikachu.png" alt="ashPikachu" width="60%" height="60%">
     </article>
- 
+
   </section>
 
 
@@ -89,13 +101,12 @@
   </section>
 
   <section class="containerThree" id="containerThree">
-   <p>pokemon</p>
-   <p>Elementos de prueba </p>
+    <p>pokemon</p>
+    <p>Elementos de prueba </p>
 
 
 
   </section>
-
 
 
 
@@ -113,5 +124,5 @@
  
 </footer>
 <div id="root"></div>
-  
+
 </html>
