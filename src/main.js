@@ -14,7 +14,6 @@ function changeViewBeginning() {
     document.getElementById("containerOne").style.display = "block";
 }
 
-
 function changeViewPokedexButton() {
     document.getElementById("containerOne","containerThree").style.display = "none";
     document.getElementById("containerTwo").style.display = "block";
@@ -29,29 +28,41 @@ function changeViewTypesButton() {
 console.log(data);
 
 let infoPokemon = Object.values(data.pokemon);
+console.log(infoPokemon);
 
 function showData(infoPokemon) {
     for (let i = 0; i < infoPokemon.length; i++ ){
-        let namePokemon = infoPokemon[i].name;
-        let createNameForPokemon=document.createTextNode(namePokemon);
-        ///console.log(namePokemon);
+
+        //numero de pokemon
+        let numberPokemon=infoPokemon[i].num;
+        console.log(i);
+    
+        //imagen de pokemon
         let imagePokemon = infoPokemon[i].img;
-        console.log(imagePokemon);
-        ///let createImageForPokemon= (document.createElement(`<img src= "${imagePokemon}"></img>`));
+       
+        //nombre de pokemon
+        let namePokemon = infoPokemon[i].name;
+
+        //tipo de pokemon
+        let typesPokemon=infoPokemon [i].type;
+
         let showBox = document.querySelector(".selectorBox");
         let createInfo = document.createElement("div");
+        createInfo.classList.add("pokeCards");
+
 
         showBox.appendChild(createInfo);
         createInfo.innerHTML=`
-        <img src= "${imagePokemon}"></img>
+        <p id=numPokemon>${numberPokemon}</p>
+        <div class="styleForImageContainer">
+        <img  src= "${imagePokemon}">
+        </div>
+        <p id=namePokemon>${namePokemon}</p>
+        <p id=typesPokemon>${typesPokemon}</p>
         `
-        createInfo.appendChild(createNameForPokemon);
     }
 }
 window.addEventListener("load", showData(infoPokemon));
 
-document.getSelection("div").addEventListener("click", function(){
 
-    
-}
-)
+
