@@ -14,7 +14,6 @@ function changeViewBeginning() {
     document.getElementById("containerOne").style.display = "block";
 }
 
-
 function changeViewPokedexButton() {
     document.getElementById("containerOne","containerThree").style.display = "none";
     document.getElementById("containerTwo").style.display = "block";
@@ -29,34 +28,38 @@ function changeViewTypesButton() {
 console.log(data);
 
 let infoPokemon = Object.values(data.pokemon);
+console.log(infoPokemon);
 
 function showData(infoPokemon) {
     for (let i = 0; i < infoPokemon.length; i++ ){
-        let namePokemon = infoPokemon[i].name;
-        let createNameForPokemon=document.createTextNode(namePokemon);
-        ///console.log(namePokemon);
-        let imagePokemon = infoPokemon[i].img;
-        console.log(imagePokemon);
-        ///let createImageForPokemon= (document.createElement(`<img src= "${imagePokemon}"></img>`));
-        let showBox = document.querySelector(".selectorBox");
-        let createInfo = document.createElement("div");
-      //numero de pokemon
+
+        //numero de pokemon
         let numberPokemon=infoPokemon[i].num;
-        let createNumberForPokemon=document.createTextNode(numberPokemon);
-        console.log(numberPokemon);
+        console.log(i);
+    
+        //imagen de pokemon
+        let imagePokemon = infoPokemon[i].img;
+       
+        //nombre de pokemon
+        let namePokemon = infoPokemon[i].name;
+
         //tipo de pokemon
         let typesPokemon=infoPokemon [i].type;
-        let createTypesForPokemon=document.createTextNode(typesPokemon);
-        console.log(typesPokemon);
+
+        let showBox = document.querySelector(".selectorBox");
+        let createInfo = document.createElement("div");
+        createInfo.classList.add("pokeCards");
+
 
         showBox.appendChild(createInfo);
         createInfo.innerHTML=`
-        <div class="stylePokemon">
-        <img  src= "${imagePokemon}">
         <p id=numPokemon>${numberPokemon}</p>
+        <div class="styleForImageContainer">
+        <img  src= "${imagePokemon}">
+        </div>
+        <p id=namePokemon>${namePokemon}</p>
         <p id=typesPokemon>${typesPokemon}</p>
-        </div>`
-        createInfo.appendChild(createNameForPokemon);
+        `
     }
 }
 window.addEventListener("load", showData(infoPokemon));
@@ -64,114 +67,6 @@ window.addEventListener("load", showData(infoPokemon));
 document.getSelection("div").addEventListener("click", function(){ 
 }
 )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const toggleButton = document.getElementById('buttonMenu')
 const navWrapper = document.getElementById('nav')
@@ -187,3 +82,4 @@ navWrapper.addEventListener('click',e => {
     toggleButton.classList.remove('close')
   }
 })
+
