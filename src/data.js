@@ -4,49 +4,17 @@ let infoPokemon = Object.values(data.pokemon);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-export const filterTypeWater = (typesfilter, data) => {
-  const onlyWater = infoPokemon.filter(function(el){
+export const filterTypeWater = (data) => {
+  console.log(data)
+  const onlyWater = data.filter(function(el){
     return (el.type).includes("water");
 })
 console.log(onlyWater);
 return onlyWater;
 }
 
-export const filterTypeBug = (typesfilter, data) => {
-  const onlyBug = infoPokemon.filter(function(el){
+export const filterTypeBug = (data) => {
+  const onlyBug = data.filter(function(el){
     return el.type.includes("bug");
 })
 console.log(onlyBug);
