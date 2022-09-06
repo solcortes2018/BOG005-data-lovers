@@ -67,8 +67,7 @@ p{
     color: #F7E300;
     transition: 0.6ms;
     text-decoration: none;
-    font-family:
-    'monserrat',sans-serif;
+    font-family:'Montserrat', sans-serif;
     position: relative;
     justify-content: right;
   }
@@ -149,16 +148,12 @@ p{
 
     }
 
-
-
 header {
     width: 100%;
     height: 50px;
     background-color: #127E6E;
     display: table;
 }
-
-
 
 body{
     background: url(css/fondo_pokebook.jpeg);
@@ -167,9 +162,6 @@ body{
     background-repeat:no-repeat;
     background-size: cover;
 }
-
-
-
 /*Página1 - Home*/
 
 .containerOne{
@@ -196,8 +188,7 @@ body{
     padding-left: 80px;
     border-radius: 50px;
     border-color: aliceblue;
-    font-family: "montserrat";
-}
+    font-family: 'Montserrat', sans-serif;}
 
 #wallpaper1 {
     width: 100% min-content;
@@ -289,32 +280,23 @@ body{
 /*Página3 - Calculo*/
 
 
+#headerOrder{
+  position: fixed 100%;
+  background-color: #fae478;
+  text-align: center;
+  
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#orderOfPokemon {
+  background-color:#fae478;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: medium;
+    border-radius: 10px;
+    position:inherit;
+  
+}
 
 .containerThree {
     display: none;
@@ -341,4 +323,3 @@ footer .networkIcon {
     justify-content: center;
     align-items: center;
 }
-
