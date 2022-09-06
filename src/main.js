@@ -1,5 +1,7 @@
-import { organize } from './data.js'
+
+import {sortDataA, sortDataZ} from './data.js';
 import data from './data/pokemon/pokemon.js'; //trajimos la data en console log prueba #1
+
 
 
 let beginning= document.getElementById ("beginning");
@@ -82,4 +84,39 @@ navWrapper.addEventListener('click',e => {
     toggleButton.classList.remove('close')
   }
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
