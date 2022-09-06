@@ -1,18 +1,17 @@
-
-import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
 let infoPokemon = Object.values(data.pokemon);
 
-export const filterTypeWater = (typesfilter, data) => {
-  const onlyWater = infoPokemon.filter(function(el){
+export const filterTypeWater = (data) => {
+  console.log(data);
+  const onlyWater = data.filter(function(el){
     return (el.type).includes("water");
 })
 console.log(onlyWater);
 return onlyWater;
 }
 
-export const filterTypeBug = (typesfilter, data) => {
-  const onlyBug = infoPokemon.filter(function(el){
+export const filterTypeBug = (data) => {
+  const onlyBug = data.filter(function(el){
     return el.type.includes("bug");
 })
 console.log(onlyBug);
@@ -123,29 +122,6 @@ console.log(onlyFlying);
 return onlyFlying;
 }
 
-
-
-
-// estas funciones son de ejemplo
- //FUNCION ORDEN ALFABETICO
-
-// export const organize = (data) => {
- 
-//  let alphabeticalOrder = data.sort((a, b) => {
-//    if (a.namePokemon == b.namePokemon) {
-//      return 0;
-//    }
-//    if (a.namePokemon < b.namePokemon) {
-//      return -1;
-//    }
-//    return 1;
-//  });
-//  return alphabeticalOrder
- 
-//};
-
-
-
 //let touchCards = document.getElementsByClassName("pokeCards");
 //console.log(touchCards);
 
@@ -166,11 +142,9 @@ return onlyFlying;
 //  </div>`
 //})}
 
-
-//A-Z//
 export const sortDataA = (data) => {
-
   let dataOrder = [...data]
+ // console.log(data)
   dataOrder.sort((a, b) => {
     if (a.name == b.name) {
       return 0;
@@ -178,13 +152,11 @@ export const sortDataA = (data) => {
       return -1;
     } else {
       return 1;
-
     }
-    console.log (data);
   });
-  return copydata
+  return dataOrder
 };
-//Z-A//
+
 export const sortDataZ = (data) => {
   let dataOrder = [...data]
   dataOrder.sort((a, b) => {
@@ -194,9 +166,8 @@ export const sortDataZ = (data) => {
       return -1;
     } else {
       return 1;
-
     }
-    
+
   });
-  return copydata
+  return dataOrder
 };

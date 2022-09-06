@@ -1,7 +1,6 @@
 //import { organize } from './data.js'
-import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js'; //trajimos la data en console log prueba #1
-import {filterTypeWater, filterTypeBug, filterTypeDragon, filterTypeElectric, filterTypeGhost, filterTypeFire, filterTypeIce, filterTypeFighting, filterTypeGrass, filterTypeNormal, filterTypePsychic, filterTypeRock, filterTypeGround, filterTypeFlying, filterTypePoison} from './data.js'
+import {sortDataZ, sortDataA, filterTypeWater, filterTypeBug, filterTypeDragon, filterTypeElectric, filterTypeGhost, filterTypeFire, filterTypeIce, filterTypeFighting, filterTypeGrass, filterTypeNormal, filterTypePsychic, filterTypeRock, filterTypeGround, filterTypeFlying, filterTypePoison} from './data.js'
 
 
 let beginning= document.getElementById ("beginning");
@@ -82,14 +81,17 @@ function selectByType () {
   } 
   
   else if(numberOfType === 1){
-    let applyFiltertypeWater = filterTypeWater(numberOfType, data.pokemon);
+    //paso 1: fuiltrar data
+    let applyFiltertypeWater = filterTypeWater(data.pokemon);
+    //paso 2: pintarla
             let showBox = document.querySelector(".selectorBox");
+            console.log(showBox)
             showBox.innerHTML = ""
             showData(applyFiltertypeWater);
   }
 
   else if(numberOfType === 2){
-    let applyFiltertypeBug = filterTypeBug(numberOfType, data.pokemon);
+    let applyFiltertypeBug = filterTypeBug(data.pokemon);
             let showBox = document.querySelector(".selectorBox");
             showBox.innerHTML = ""
             showData(applyFiltertypeBug);
@@ -210,4 +212,30 @@ navWrapper.addEventListener('click',e => {
   }
 })
 
+///
 
+//mostarar funcion ordenar
+orderDataName()
+
+function orderDataName() {
+  let orderPokemon = document.getElementById("orderOfPokemon")
+  orderPokemon.addEventListener("change", () => {
+    let organizedData
+    let sortValue = orderPokemon.value
+
+    if (sortValue == "orderAz") {
+      organizedData = sortDataA(data.pokemon);
+    } else if (sortValue == "orderZa") {
+      organizedData = sortDataZ(data.pokemon);
+    } else {
+      organizedData = data.pokemon
+    }
+
+    console.log(organizedData);
+
+    const showBox1 = document.querySelector(".selectorBox");
+    showBox1.innerHTML = ""
+    showData(organizedData);
+    
+  }); 
+}
