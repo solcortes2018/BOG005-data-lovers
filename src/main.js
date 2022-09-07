@@ -82,7 +82,7 @@ function selectByType () {
   
   else if(numberOfType === 1){
     //paso 1: fuiltrar data
-    let applyFiltertypeWater = filterTypeWater(data.pokemon);
+    let applyFiltertypeWater = filterTypeWater(numberOfType, data.pokemon);
     //paso 2: pintarla
             let showBox = document.querySelector(".selectorBox");
             console.log(showBox)
