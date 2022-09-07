@@ -1,19 +1,19 @@
 
-import pokemon from "./data/pokemon/pokemon.js";
 import data from './data/pokemon/pokemon.js';
 let infoPokemon = Object.values(data.pokemon);
 
-
-export const filterTypeWater = (typesfilter, data) => {
-  const onlyWater = infoPokemon.filter(function (el) {
+export const filterTypeWater = (data) => {
+  console.log(data);
+  const onlyWater = data.filter(function(el){
     return (el.type).includes("water");
   })
   console.log(onlyWater);
   return onlyWater;
 }
 
-export const filterTypeBug = (typesfilter, data) => {
-  const onlyBug = infoPokemon.filter(function (el) {
+export const filterTypeBug = (data) => {
+  const onlyBug = data.filter(function(el){
+
     return el.type.includes("bug");
   })
   console.log(onlyBug);
@@ -124,11 +124,28 @@ export const filterTypeFlying = (typesfilter, data) => {
   return onlyFlying;
 }
 
+//let touchCards = document.getElementsByClassName("pokeCards");
+//console.log(touchCards);
 
+//for (let i = 0; i < infoPokemon.length; i++) {
+//  pokeCards.addEventListener("click", function showInfoByPokemon(){
+//  document.getElementById("visualizator").innerHTML= `
+//  <div id="styleForDataContainer">
+//  <p id=numPokemon>"Pokemones123"</p>
+//  <p id=namePokemon>${namePokemon}</p>
+//  <p id=typesPokemon>${typesPokemon}</p>
+
+//  </div>
+
+//  <div class="styleForImageContainer">
+//  <img  src= "${imagePokemon}">
+//  </div>
+//  <div id="styleForDataContainer2">
+//  </div>`
+//})}
 
 
 export const sortDataA = (data) => {
-
   let dataOrder = [...data]
  // console.log(data)
   dataOrder.sort((a, b) => {
@@ -138,7 +155,6 @@ export const sortDataA = (data) => {
       return -1;
     } else {
       return 1;
-
     }
   });
   return dataOrder
@@ -153,7 +169,6 @@ export const sortDataZ = (data) => {
       return -1;
     } else {
       return 1;
-
     }
 
   });
