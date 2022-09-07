@@ -1,3 +1,4 @@
+
 //import { organize } from './data.js'
 import data from './data/pokemon/pokemon.js'; //trajimos la data en console log prueba #1
 import {sortDataZ, sortDataA, filterTypeWater, filterTypeBug, filterTypeDragon, filterTypeElectric, filterTypeGhost, filterTypeFire, filterTypeIce, filterTypeFighting, filterTypeGrass, filterTypeNormal, filterTypePsychic, filterTypeRock, filterTypeGround, filterTypeFlying, filterTypePoison} from './data.js'
@@ -47,6 +48,9 @@ function showData(infoPokemon) {
         //tipo de pokemon
         let typesPokemon=infoPokemon [i].type;
 
+        //region del pokemon
+        let theRegionPokemon= infoPokemon [i].generation.name;
+
         let showBox = document.querySelector(".selectorBox");
         let createInfo = document.createElement("div");
         createInfo.classList.add("pokeCards");
@@ -61,6 +65,7 @@ function showData(infoPokemon) {
         </div>
         <p id=namePokemon>${namePokemon}</p>
         <p id=typesPokemon>${typesPokemon}</p>
+        <p id=theRegionPokemon>${theRegionPokemon}</p>
         `
     }
 }
@@ -215,11 +220,14 @@ navWrapper.addEventListener('click',e => {
 ///
 
 //mostarar funcion ordenar
+
 orderDataName()
 
 function orderDataName() {
   let orderPokemon = document.getElementById("orderOfPokemon")
   orderPokemon.addEventListener("change", () => {
+    // console.log(orderPokemon.value);
+
     let organizedData
     let sortValue = orderPokemon.value
 

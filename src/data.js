@@ -1,3 +1,4 @@
+
 import data from './data/pokemon/pokemon.js';
 let infoPokemon = Object.values(data.pokemon);
 
@@ -5,121 +6,122 @@ export const filterTypeWater = (data) => {
   console.log(data);
   const onlyWater = data.filter(function(el){
     return (el.type).includes("water");
-})
-console.log(onlyWater);
-return onlyWater;
+  })
+  console.log(onlyWater);
+  return onlyWater;
 }
 
 export const filterTypeBug = (data) => {
   const onlyBug = data.filter(function(el){
+
     return el.type.includes("bug");
-})
-console.log(onlyBug);
-return onlyBug;
+  })
+  console.log(onlyBug);
+  return onlyBug;
 }
 
 export const filterTypeDragon = (typesfilter, data) => {
-  const onlyDragon = infoPokemon.filter(function(el){
+  const onlyDragon = infoPokemon.filter(function (el) {
     return el.type.includes("dragon");
-})
-console.log(onlyDragon);
-return onlyDragon;
+  })
+  console.log(onlyDragon);
+  return onlyDragon;
 }
 
 export const filterTypeElectric = (typesfilter, data) => {
-  const onlyElectric = infoPokemon.filter(function(el){
+  const onlyElectric = infoPokemon.filter(function (el) {
     return el.type.includes("electric");
-})
-console.log(onlyElectric);
-return onlyElectric;
+  })
+  console.log(onlyElectric);
+  return onlyElectric;
 }
 
 export const filterTypeGhost = (typesfilter, data) => {
-  const onlyGhost = infoPokemon.filter(function(el){
+  const onlyGhost = infoPokemon.filter(function (el) {
     return el.type.includes("ghost");
-})
-console.log(onlyGhost);
-return onlyGhost;
+  })
+  console.log(onlyGhost);
+  return onlyGhost;
 }
 
 export const filterTypeFire = (typesfilter, data) => {
-  const onlyFire = infoPokemon.filter(function(el){
+  const onlyFire = infoPokemon.filter(function (el) {
     return el.type.includes("fire");
-})
-console.log(onlyFire);
-return onlyFire;
+  })
+  console.log(onlyFire);
+  return onlyFire;
 }
 
 export const filterTypeIce = (typesfilter, data) => {
-  const onlyIce = infoPokemon.filter(function(el){
+  const onlyIce = infoPokemon.filter(function (el) {
     return el.type.includes("ice");
-})
-console.log(onlyIce);
-return onlyIce;
+  })
+  console.log(onlyIce);
+  return onlyIce;
 }
 
 export const filterTypeFighting = (typesfilter, data) => {
-  const onlyFighting = infoPokemon.filter(function(el){
+  const onlyFighting = infoPokemon.filter(function (el) {
     return el.type.includes("fighting");
-})
-console.log(onlyFighting);
-return onlyFighting;
+  })
+  console.log(onlyFighting);
+  return onlyFighting;
 }
 
 export const filterTypeNormal = (typesfilter, data) => {
-  const onlyNormal = infoPokemon.filter(function(el){
+  const onlyNormal = infoPokemon.filter(function (el) {
     return el.type.includes("normal");
-})
-console.log(onlyNormal);
-return onlyNormal;
+  })
+  console.log(onlyNormal);
+  return onlyNormal;
 }
 
 export const filterTypeGrass = (typesfilter, data) => {
-  const onlyGrass = infoPokemon.filter(function(el){
+  const onlyGrass = infoPokemon.filter(function (el) {
     return el.type.includes("grass");
-})
-console.log(onlyGrass);
-return onlyGrass;
+  })
+  console.log(onlyGrass);
+  return onlyGrass;
 }
 
 export const filterTypePsychic = (typesfilter, data) => {
-  const onlyPsychic = infoPokemon.filter(function(el){
+  const onlyPsychic = infoPokemon.filter(function (el) {
     return el.type.includes("psychic");
-})
-console.log(onlyPsychic);
-return onlyPsychic;
+  })
+  console.log(onlyPsychic);
+  return onlyPsychic;
 }
 
 export const filterTypeRock = (typesfilter, data) => {
-  const onlyRock = infoPokemon.filter(function(el){
+  const onlyRock = infoPokemon.filter(function (el) {
     return el.type.includes("rock");
-})
-console.log(onlyRock);
-return onlyRock;
+  })
+  console.log(onlyRock);
+  return onlyRock;
 }
 
 export const filterTypeGround = (typesfilter, data) => {
-  const onlyGround = infoPokemon.filter(function(el){
+  const onlyGround = infoPokemon.filter(function (el) {
     return el.type.includes("ground");
-})
-console.log(onlyGround);
-return onlyGround;
+  })
+  console.log(onlyGround);
+  return onlyGround;
 }
 
 export const filterTypePoison = (typesfilter, data) => {
-  const onlyPoison = infoPokemon.filter(function(el){
+  const onlyPoison = infoPokemon.filter(function (el) {
     return el.type.includes("poison");
-})
-console.log(onlyPoison);
-return onlyPoison;
+  })
+  console.log(onlyPoison);
+  return onlyPoison;
 }
 
 export const filterTypeFlying = (typesfilter, data) => {
-  const onlyFlying = infoPokemon.filter(function(el){
+  const onlyFlying = infoPokemon.filter(function (el) {
     return el.type.includes("flying");
-})
-console.log(onlyFlying);
-return onlyFlying;
+  })
+  console.log(onlyFlying);
+  return onlyFlying;
 }
 
 //let touchCards = document.getElementsByClassName("pokeCards");
@@ -141,6 +143,7 @@ return onlyFlying;
 //  <div id="styleForDataContainer2">
 //  </div>`
 //})}
+
 
 export const sortDataA = (data) => {
   let dataOrder = [...data]
@@ -171,3 +174,4 @@ export const sortDataZ = (data) => {
   });
   return dataOrder
 };
+
