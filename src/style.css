@@ -269,17 +269,14 @@ body{
     padding-left: 20px;
     font-size: medium;
     border-radius: 10px;
-    position:inherit;
+    position:relative;
+    
 }
 
 #numPokemon{
     font-weight: bold;
     font-size: 150%;
 }
-
-/*Página3 - Calculo*/
-
-
 #headerOrder{
   position: fixed 100%;
   background-color: #fae478;
@@ -294,9 +291,28 @@ body{
     padding-left: 20px;
     font-size: medium;
     border-radius: 10px;
-    position:inherit;
-  
+    position:relative;
+     
 }
+#headerRegion{
+  position: fixed 100%;
+  background-color: #fae478;
+  text-align: center;
+}
+#regionOfPokemon{
+  background-color:#fae478;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: medium;
+    border-radius: 10px;
+    position:relative;
+}
+
+/*Página3 - Calculo*/
+
+
+
 
 .containerThree {
     display: none;

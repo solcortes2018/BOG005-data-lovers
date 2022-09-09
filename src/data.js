@@ -1,10 +1,11 @@
 
+import pokemon from './data/pokemon/pokemon.js'
 import data from './data/pokemon/pokemon.js';
 let infoPokemon = Object.values(data.pokemon);
 
 export const filterTypeWater = (data) => {
   console.log(data);
-  const onlyWater = data.filter(function(el){
+  const onlyWater = data.filter(function (el) {
     return (el.type).includes("water");
   })
   console.log(onlyWater);
@@ -12,7 +13,7 @@ export const filterTypeWater = (data) => {
 }
 
 export const filterTypeBug = (data) => {
-  const onlyBug = data.filter(function(el){
+  const onlyBug = data.filter(function (el) {
 
     return el.type.includes("bug");
   })
@@ -144,10 +145,10 @@ export const filterTypeFlying = (typesfilter, data) => {
 //  </div>`
 //})}
 
-
+//funcion ordenar alfabeticamente
 export const sortDataA = (data) => {
   let dataOrder = [...data]
- // console.log(data)
+  // console.log(data)
   dataOrder.sort((a, b) => {
     if (a.name == b.name) {
       return 0;
@@ -161,7 +162,7 @@ export const sortDataA = (data) => {
 };
 
 export const sortDataZ = (data) => {
-  let dataOrder = [...data]
+  let dataOrder = [...data];
   dataOrder.sort((a, b) => {
     if (a.name == b.name) {
       return 0;
@@ -172,6 +173,25 @@ export const sortDataZ = (data) => {
     }
 
   });
-  return dataOrder
+  return dataOrder;
 };
 
+//funcion filtrar por region
+
+export const filterByType = (data, typeFilter) => {
+  return data.filter(function (datapokemon) {
+    if(datapokemon.type.includes(typeFilter)){
+      return true;
+    } else{
+      return false;
+    }
+  })
+}
+
+export const filterRegion = (data, regionFilter) => {
+  const filterRegion = data.filter(function (datapokemon) {
+    return datapokemon.generation.name === regionFilter;
+  });
+
+  return filterRegion;
+}
