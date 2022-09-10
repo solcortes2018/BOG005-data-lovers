@@ -18,11 +18,11 @@
 </head>
 <header class="mainHeader">
   <img src="css/POKEBOOK.png" id="imagenPokebook" class="mainLogo">
-  <nav id ="nav" class="mainNave">
+  <nav id="nav" class="mainNave">
     <div class="navLinks">
       <a href="#" id="beginning" class="linkItem">Inicio</a>
       <a href="#" id="pokedexButton" class="linkItem">Pokedex</a>
-      <a href="#" id="typesButton" class="linkItem">Encuentra tu Pokémon</a>
+      <a href="#" id="typesButton" class="linkItem">Dato Curioso</a>
     </div>
   </nav>
   <button id="buttonMenu" class="buttonMenu">
@@ -31,15 +31,6 @@
     <span></span>
   </button>
 </header>
-<!--<select name="Menú" id="menu">
-      <option id="beginning" value="00">Menú</option>
-      <option value="01">Inicio</option>
-      <option id="pokedexBottom " value="02">Pokedex</option>
-      <option value="03">Tipos de Pokémon</option>
-    </select>
-    <a href = "#" id="beginning">Inicio</a>
-    <a href="#" id="pokedexButton">Pokedex</a>
-    <a href="#" id="typesButton">Encuentra tu pokemon</a>-->
 
 <body>
   <!--Pagina inicio-->
@@ -48,15 +39,16 @@
     <article class="absolutePageHome">
       <h1 id="titleHome1">¿Quieres conocer más sobre tus pokemon favoritos?</h1>
       <br><br><br>
-      <button class="pokedexButton">¡Entra aquí!</button>
+      <button id="enterHere">¡Entra aquí!</button>
     </article>
 
-      <!--<article class="togepi"><img src="css/toggepi.gif" alt="toggepi"> </article>-->
-      <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline  oncontextmenu="return false;"  preload="auto"  id="wallpaper1">
-        <source src="css/wallpaperPageHome.mp4" type="video/mp4">
-      </video>
+    <!--<article class="togepi"><img src="css/toggepi.gif" alt="toggepi"> </article>-->
+    <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline oncontextmenu="return false;" preload="auto"
+      id="wallpaper1">
+      <source src="css/wallpaperPageHome.mp4" type="video/mp4">
+    </video>
 
-      <br><br><br>
+    <br><br><br>
     <article id="Pag1Sec2">
       <h1>!Descubre cuál seria tu primer pokémon!</h1>
 
@@ -72,42 +64,43 @@
       <img src="css/Pokedex.png" id="imagenPokedex">
       <h3>¡Encuentra tus pokemon favoritos!</h3>
       <br><br>
-        <h2>Tipos de Pokemon</h2>
-        <br>
-        <select name="Types" id="typesOfPokemon">
-          <option value="00" class="categoryItem">Todos</option>
-          <option value="01" class="categoryItem">Tipo Agua</option>
-          <option value="02" class="categoryItem">Tipo Bicho</option>
-          <option value="03" class="categoryItem">Tipo Dragón</option>
-          <option value="04" class="categoryItem">Tipo Eléctrico</option>
-          <option value="05" class="categoryItem">Tipo Fantasma</option>
-          <option value="06" class="categoryItem">Tipo Fuego</option>
-          <option value="07" class="categoryItem">Tipo Hielo</option>
-          <option value="08" class="categoryItem">Tipo Lucha</option>
-          <option value="09" class="categoryItem">Tipo Normal</option>
-          <option value="10" class="categoryItem">Tipo Planta</option>
-          <option value="11" class="categoryItem">Tipo Psiquico</option>
-          <option value="12" class="categoryItem">Tipo Roca</option>
-          <option value="13" class="categoryItem">Tipo Tierra</option>
-          <option value="14" class="categoryItem">Tipo Veneno</option>
-          <option value="15" class="categoryItem">Tipo Volador</option>
+      <h2>Tipos de Pokemon</h2>
+      <br>
+      <select name="Types" id="typesOfPokemon" class="typesOfPokemon">
+        <option value="00" class="categoryItem">Todos</option>
+        <option value="01" class="categoryItem">Tipo Agua</option>
+        <option value="02" class="categoryItem">Tipo Bicho</option>
+        <option value="03" class="categoryItem">Tipo Dragón</option>
+        <option value="04" class="categoryItem">Tipo Eléctrico</option>
+        <option value="05" class="categoryItem">Tipo Fantasma</option>
+        <option value="06" class="categoryItem">Tipo Fuego</option>
+        <option value="07" class="categoryItem">Tipo Hielo</option>
+        <option value="08" class="categoryItem">Tipo Lucha</option>
+        <option value="09" class="categoryItem">Tipo Normal</option>
+        <option value="10" class="categoryItem">Tipo Planta</option>
+        <option value="11" class="categoryItem">Tipo Psiquico</option>
+        <option value="12" class="categoryItem">Tipo Roca</option>
+        <option value="13" class="categoryItem">Tipo Tierra</option>
+        <option value="14" class="categoryItem">Tipo Veneno</option>
+        <option value="15" class="categoryItem">Tipo Volador</option>
+      </select>
+      <article id="headerRegion">
+        <select name="region" id="regionOfPokemon" placeholder="pokemonRegion" class="regionOfPokemon">
+          <option value="regionFilter">REGION</option>
+          <option value="kanto">Kanto</option>
+          <option value="johto">Johto</option>
         </select>
-<article id="headerRegion">
-  <select name="region" id= "regionOfPokemon" placeholder="pokemonRegion"> 
-    <option value="regionFilter">REGION</option>
-    <option value="kanto">Kanto</option>
-    <option value="johto">Johto</option> 
-  </select>
-</article>
-        <article id="headerOrder">
-          <select name="order" id= "orderOfPokemon">
-            <option value="OrderN">ORDENAR</option>
-            <option value="orderAz">A-Z</option>
-            <option value="orderZa">Z-A</option> 
-          </select>
-        </article>
-   
-        <br><br>
+      </article>
+      <article id="headerOrder">
+        <select name="order" id="orderOfPokemon" class="orderOfPokemon">
+          <option value="OrderN">ORDENAR</option>
+          <option value="orderAz">A-Z</option>
+          <option value="orderZa">Z-A</option>
+        </select>
+      </article>
+      
+
+      <br><br>
     </article>
     <!--<article id="visualizator">
     </article>-->
@@ -116,27 +109,29 @@
     </article>
   </section>
 
-  
+
   <section class="containerThree" id="containerThree">
-    
+    <article class="funFact">
+    </article>
 
   </section>
 
 
 
 
- </body>
- <br>
- <br>
- <footer>
+</body>
+<br>
+<br>
+<footer>
   <p>BY NATA & SOL</p>
   <div class="networkIcon">
-  <a href="#" class="icons" ><img src="css/icono_facebook.png" alt="iconFacebook"></a>
-  <a href="#" class="icons"><img src="css/icono_instagram.png" alt="iconInstagram"></a>
-  <a href="#" class="icons"><img src="css/icocno_twitter.png" alt="iconTwitter"></a>
+    <a href="#" class="icons"><img src="css/icono_facebook.png" alt="iconFacebook"></a>
+    <a href="#" class="icons"><img src="css/icono_instagram.png" alt="iconInstagram"></a>
+    <a href="#" class="icons"><img src="css/icocno_twitter.png" alt="iconTwitter"></a>
   </div>
- 
+
 </footer>
 <div id="root"></div>
 <script src="main.js" type="module"></script>
+
 </html>

@@ -2,7 +2,7 @@
 //import { organize } from './data.js'
 import pokemon from './data/pokemon/pokemon.js'
 import data from './data/pokemon/pokemon.js'; //trajimos la data en console log prueba #1
-import { filterRegion, sortDataZ, sortDataA, filterTypeWater, filterTypeBug, filterTypeDragon, filterTypeElectric, filterTypeGhost, filterTypeFire, filterTypeIce, filterTypeFighting, filterTypeGrass, filterTypeNormal, filterTypePsychic, filterTypeRock, filterTypeGround, filterTypeFlying, filterTypePoison } from './data.js'
+import { pokemonSmall, filterRegion, sortDataZ, sortDataA, filterTypeWater, filterTypeBug, filterTypeDragon, filterTypeElectric, filterTypeGhost, filterTypeFire, filterTypeIce, filterTypeFighting, filterTypeGrass, filterTypeNormal, filterTypePsychic, filterTypeRock, filterTypeGround, filterTypeFlying, filterTypePoison } from './data.js'
 
 
 let beginning = document.getElementById("beginning");
@@ -11,6 +11,8 @@ let pokedexButton = document.getElementById("pokedexButton");
 pokedexButton.addEventListener("click", changeViewPokedexButton);
 let typesButton = document.getElementById("typesButton");
 typesButton.addEventListener("click", changeViewTypesButton);
+let pokedexButtonHome = document.getElementById("enterHere");
+pokedexButtonHome.addEventListener("click", changeViewPokedexButton);
 
 function changeViewBeginning() {
   document.getElementById("containerTwo", "containerThree").style.display = "none";
@@ -70,7 +72,7 @@ function showData(infoPokemon) {
         `
   }
 }
-window.addEventListener("load", showData(infoPokemon));
+
 
 
 
@@ -242,8 +244,8 @@ function orderDataName() {
 
     console.log(organizedData);
 
-    const showBox1 = document.querySelector(".selectorBox");
-    showBox1.innerHTML = ""
+    const showBoxOne = document.querySelector(".selectorBox");
+    showBoxOne.innerHTML = ""
     showData(organizedData);
 
   });
@@ -253,19 +255,35 @@ function orderDataName() {
 showRegionFilter()
 function showRegionFilter() {
   let optionRegion = document.getElementById("regionOfPokemon")
-  optionRegion.addEventListener("change", (event) =>{
+  optionRegion.addEventListener("change", (event) => {
     let selectRegion = event.target.value;
     if (selectRegion == "regionOfPokemon") {
       showData(data.pokemon);
     } else {
       let arrayFilter = filterRegion(data.pokemon, selectRegion);
-      const showBox2 = document.querySelector(".selectorBox");
-    showBox2.innerHTML = ""
-    showData(arrayFilter);
+
+      const showBoxTwo = document.querySelector(".selectorBox");
+      showBoxTwo.innerHTML = ""
+      showData(arrayFilter);
 
 
     }
   }
-  
+
   )
 }
+
+// mostrar el pokemon mas pequeño
+
+
+const funFactOne = document.getElementById("typesButton");
+funFactOne.addEventListener("click", () => {
+
+ document.querySelector(".selectorBox").innerHTML = "";
+  showData (pokemonSmall);
+})
+
+
+
+
+window.addEventListener("load", showData(infoPokemon));

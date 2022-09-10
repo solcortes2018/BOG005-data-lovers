@@ -188,6 +188,8 @@ export const filterByType = (data, typeFilter) => {
   })
 }
 
+
+
 export const filterRegion = (data, regionFilter) => {
   const filterRegion = data.filter(function (datapokemon) {
     return datapokemon.generation.name === regionFilter;
@@ -195,3 +197,21 @@ export const filterRegion = (data, regionFilter) => {
 
   return filterRegion;
 }
+//funcion para traer el pokemon mas pequeño 
+
+export function smallPokemon (pokemones) {
+  const pokelist= [...pokemones]
+  pokelist.sort((pokex,pokey) => {
+    if(pokex.size.height > pokey.size.height){
+      return 1;
+    } else {
+       return -1;}      
+  })
+ // console.log(pokelist [0])
+  return pokelist[0]
+  
+  
+}
+
+export const pokemonSmall = smallPokemon (pokemon.pokemon);
+console.log(pokemonSmall);
