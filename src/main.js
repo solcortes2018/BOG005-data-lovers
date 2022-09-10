@@ -280,10 +280,8 @@ const funFactOne = document.getElementById("typesButton");
 funFactOne.addEventListener("click", () => {
 
  document.querySelector(".selectorBox").innerHTML = "";
-  showData (pokemonSmall);
+  showData (pokemonSmall)
+
+
 })
-
-
-
-
 window.addEventListener("load", showData(infoPokemon));
