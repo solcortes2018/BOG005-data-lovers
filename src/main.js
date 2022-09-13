@@ -2,7 +2,7 @@
 //import { organize } from './data.js'
 import pokemon from './data/pokemon/pokemon.js'
 import data from './data/pokemon/pokemon.js'; //trajimos la data en console log prueba #1
-import { pokemonSmall, filterRegion, sortDataZ, sortDataA, filterTypeWater, filterTypeBug, filterTypeDragon, filterTypeElectric, filterTypeGhost, filterTypeFire, filterTypeIce, filterTypeFighting, filterTypeGrass, filterTypeNormal, filterTypePsychic, filterTypeRock, filterTypeGround, filterTypeFlying, filterTypePoison } from './data.js'
+import {sortHeavier, sortLighter, pokemonSmall, filterRegion, sortDataZ, sortDataA, filterTypeWater, filterTypeBug, filterTypeDragon, filterTypeElectric, filterTypeGhost, filterTypeFire, filterTypeIce, filterTypeFighting, filterTypeGrass, filterTypeNormal, filterTypePsychic, filterTypeRock, filterTypeGround, filterTypeFlying, filterTypePoison } from './data.js'
 
 
 let beginning = document.getElementById("beginning");
@@ -72,9 +72,6 @@ function showData(infoPokemon) {
         `
   }
 }
-
-
-
 
 /// FUNCIÓN FILTRAR POR TIPO DE POKEMON
 
@@ -195,15 +192,12 @@ function selectByType() {
     showBox.innerHTML = ""
     showData(applyFiltertypeFlying);
   }
-
 }
 
 document.getElementById("typesOfPokemon").addEventListener("change", selectByType);
 
 
-
 /// MENU HAMBURGUESA
-
 
 const toggleButton = document.getElementById('buttonMenu')
 const navWrapper = document.getElementById('nav')
@@ -265,16 +259,11 @@ function showRegionFilter() {
       const showBoxTwo = document.querySelector(".selectorBox");
       showBoxTwo.innerHTML = ""
       showData(arrayFilter);
-
-
-    }
-  }
-
+    }}
   )
 }
 
 // mostrar el pokemon mas pequeño
-
 
 const funFactOne = document.getElementById("typesButton");
 funFactOne.addEventListener("click", () => {
@@ -285,3 +274,32 @@ funFactOne.addEventListener("click", () => {
 
 })
 window.addEventListener("load", showData(infoPokemon));
+
+
+
+// Ordenar por Peso
+
+orderWeight()
+
+function orderWeight() {
+  let orderPokemonWeight = document.getElementById("orderForWeight")
+  orderPokemonWeight.addEventListener("change", () => {
+
+    let organizedData
+    let sortValue = orderPokemonWeight.value
+
+    if (sortValue == "orderbyHigher") {
+      organizedData = sortHeavier(data.pokemon);
+      console.log(organizedData);
+    } else if (sortValue == "orderbyMinor") {
+      organizedData = sortLighter(data.pokemon);
+    } else {
+      organizedData = data.pokemon
+    }
+
+    const showBoxOne = document.querySelector(".selectorBox");
+    showBoxOne.innerHTML = ""
+    showData(organizedData);
+
+  });
+}

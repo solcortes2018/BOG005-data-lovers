@@ -4,7 +4,6 @@ import data from './data/pokemon/pokemon.js';
 let infoPokemon = Object.values(data.pokemon);
 
 export const filterTypeWater = (data) => {
-  console.log(data);
   const onlyWater = data.filter(function (el) {
     return (el.type).includes("water");
   })
@@ -173,6 +172,7 @@ export const sortDataZ = (data) => {
     }
 
   });
+
   return dataOrder;
 };
 
@@ -209,9 +209,41 @@ export function smallPokemon (pokemones) {
   })
  // console.log(pokelist [0])
   return pokelist[0]
-  
-  
 }
 
 export const pokemonSmall = smallPokemon (pokemon.pokemon);
 console.log(pokemonSmall);
+
+
+//funcion ordenar por base de poder
+export const sortHeavier = (data) => {
+  let dataOrder = [...data];
+  dataOrder.sort((a, b) => {
+    if (a.size.weight == b.size.weight) {
+      return 0;
+    } else if (a.size.weight > b.size.weight) {
+      return -1;
+    } else {
+      return 1;
+    }
+
+  });
+  return dataOrder;
+
+}
+
+export const sortLighter = (data) => {
+  let dataOrder = [...data];
+  dataOrder.sort((a, b) => {
+    if (a.size.weight == b.size.weight) {
+      return 0;
+    } else if (a.size.weight < b.size.weight) {
+      return -1;
+    } else {
+      return 1;
+    }
+
+  });
+  return dataOrder;
+
+}
