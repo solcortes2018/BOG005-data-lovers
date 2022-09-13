@@ -2,7 +2,7 @@
 //import { organize } from './data.js'
 import pokemon from './data/pokemon/pokemon.js'
 import data from './data/pokemon/pokemon.js'; //trajimos la data en console log prueba #1
-import { pokemonSmall, filterRegion, sortDataZ, sortDataA,filterByType } from './data.js'
+import {sortHeavier, sortLighter, pokemonSmall, filterRegion, sortDataZ, sortDataA,filterByType } from './data.js'
 
 
 let beginning = document.getElementById("beginning");
@@ -82,7 +82,6 @@ window.addEventListener("load", showData(infoPokemon));
 
 /// MENU HAMBURGUESA
 
-
 const toggleButton = document.getElementById('buttonMenu')
 const navWrapper = document.getElementById('nav')
 
@@ -130,6 +129,7 @@ function orderDataName() {
 }
 
 //mostrar funcion filtrar por region
+
 showRegionFilter()
 function showRegionFilter() {
   let optionRegion = document.getElementById("regionOfPokemon")
@@ -145,12 +145,12 @@ function showRegionFilter() {
       showData(arrayFilter);
 
 
+
     }
   });
 }
 
 // mostrar el pokemon mas pequeño
-
 
 const funFactOne = document.getElementById("typesButton");
 funFactOne.addEventListener("click", () => {
@@ -160,8 +160,8 @@ funFactOne.addEventListener("click", () => {
 
 
 });
-//mostrar tipos de pokemon 
 
+//mostrar tipos de pokemon 
 
 function filterTypeofPokemon() {
   let optionType = document.getElementById("typesOfPokemon");
@@ -183,3 +183,35 @@ function filterTypeofPokemon() {
 }
 filterTypeofPokemon()
 
+
+})
+window.addEventListener("load", showData(infoPokemon));
+
+
+
+// Ordenar por Peso
+
+orderWeight()
+
+function orderWeight() {
+  let orderPokemonWeight = document.getElementById("orderForWeight")
+  orderPokemonWeight.addEventListener("change", () => {
+
+    let organizedData
+    let sortValue = orderPokemonWeight.value
+
+    if (sortValue == "orderbyHigher") {
+      organizedData = sortHeavier(data.pokemon);
+      console.log(organizedData);
+    } else if (sortValue == "orderbyMinor") {
+      organizedData = sortLighter(data.pokemon);
+    } else {
+      organizedData = data.pokemon
+    }
+
+    const showBoxOne = document.querySelector(".selectorBox");
+    showBoxOne.innerHTML = ""
+    showData(organizedData);
+
+  });
+}

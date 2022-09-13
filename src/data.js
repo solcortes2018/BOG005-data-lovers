@@ -2,7 +2,6 @@
 import pokemon from './data/pokemon/pokemon.js'
 import data from './data/pokemon/pokemon.js';
 
-
 //funcion ordenar alfabeticamente
 export const sortDataA = (data) => {
   let dataOrder = [...data]
@@ -31,6 +30,7 @@ export const sortDataZ = (data) => {
     }
 
   });
+
   return dataOrder;
 };
 
@@ -53,6 +53,7 @@ export const filterRegion = (data, regionFilter) => {
 
   return filterRegion;
 }
+
 //funcion para traer el pokemon mas pequeño 
 
 export function smallPokemon (pokemones) {
@@ -65,8 +66,41 @@ export function smallPokemon (pokemones) {
   })
  // console.log(pokelist [0])
   return pokelist[0]
-  
-  
 }
 
 export const pokemonSmall = smallPokemon (pokemon.pokemon);
+
+
+//funcion ordenar por peso
+
+export const sortHeavier = (data) => {
+  let dataOrder = [...data];
+  dataOrder.sort((a, b) => {
+    if (a.size.weight == b.size.weight) {
+      return 0;
+    } else if (a.size.weight > b.size.weight) {
+      return -1;
+    } else {
+      return 1;
+    }
+
+  });
+  return dataOrder;
+
+}
+
+export const sortLighter = (data) => {
+  let dataOrder = [...data];
+  dataOrder.sort((a, b) => {
+    if (a.size.weight == b.size.weight) {
+      return 0;
+    } else if (a.size.weight < b.size.weight) {
+      return -1;
+    } else {
+      return 1;
+    }
+
+  });
+  return dataOrder;
+}
+
