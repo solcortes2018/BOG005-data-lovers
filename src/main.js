@@ -1,5 +1,4 @@
 
-//import { organize } from './data.js'
 import pokemon from './data/pokemon/pokemon.js'
 import data from './data/pokemon/pokemon.js'; //trajimos la data en console log prueba #1
 import {sortHeavier, sortLighter, pokemonSmall, filterRegion, sortDataZ, sortDataA,filterByType } from './data.js'
