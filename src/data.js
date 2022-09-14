@@ -40,7 +40,7 @@ export const filterByType = (data, typeFilter) => {
   const filterPokemon= data.filter(function (dataPokemon) {
     return (dataPokemon.type).includes(typeFilter)
   })
-  //console.log(filterPokemon)
+  console.log(typeFilter)
   return filterPokemon; 
 }
 
@@ -50,7 +50,7 @@ export const filterRegion = (data, regionFilter) => {
   const filterRegion = data.filter(function (dataPokemon) {
     return dataPokemon.generation.name === regionFilter;
   });
-
+  console.log(regionFilter);
   return filterRegion;
 }
 
