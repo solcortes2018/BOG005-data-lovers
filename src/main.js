@@ -22,10 +22,8 @@ function changeViewBeginning() {
 function changeViewPokedexButton() {
   document.getElementById("containerOne").style.display = "none";
   document.getElementById("containerTwo").style.display = "block";
+  showData(infoPokemon)
 }
-
-
-
 
 
 let infoPokemon = Object.values(data.pokemon);
@@ -131,6 +129,7 @@ function orderDataName() {
 //mostrar funcion filtrar por region
 
 showRegionFilter()
+
 function showRegionFilter() {
   let optionRegion = document.getElementById("regionOfPokemon")
   optionRegion.addEventListener("change", (event) => {
@@ -158,7 +157,8 @@ funFactOne.addEventListener("click", () => {
   document.querySelector(".selectorBox").innerHTML = "";
   showData([pokemonSmall]);
 
-
+  document.getElementById("containerOne").style.display = "none";
+  document.getElementById("containerTwo").style.display = "block";
 });
 
 //mostrar tipos de pokemon 
@@ -170,6 +170,8 @@ function filterTypeofPokemon() {
     let selectType = event.target.value;
 
     if (selectType == "pokemonTypes") {
+      showData(data.pokemon);
+    } else if (selectType == 0 || selectType == null) {
       showData(data.pokemon);
     } else {
       let arrayType = filterByType(data.pokemon,selectType)
@@ -184,7 +186,6 @@ function filterTypeofPokemon() {
 filterTypeofPokemon()
 
 
-})
 window.addEventListener("load", showData(infoPokemon));
 
 
