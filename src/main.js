@@ -1,5 +1,5 @@
 
-import pokemon from './data/pokemon/pokemon.js'
+
 import data from './data/pokemon/pokemon.js'; //trajimos la data en console log prueba #1
 import {sortHeavier, sortLighter, pokemonSmall, filterRegion, sortDataZ, sortDataA,filterByType } from './data.js'
 
@@ -89,8 +89,8 @@ toggleButton.addEventListener('click', () => {
 
 navWrapper.addEventListener('click', e => {
   if (e.target.id === 'nav') {
-    navWrapper.classList.remove('show')
-    toggleButton.classList.remove('close')
+    navWrapper.classList.toggle('show')
+    toggleButton.classList.toggle('close')
   }
 });
 

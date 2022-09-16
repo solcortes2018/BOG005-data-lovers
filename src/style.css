@@ -71,7 +71,7 @@ p{
     position: relative;
     justify-content: right;
   }
-  .linkItem::after {
+  .linkItem::after {/*creamos la linea debajo de cada link*/
     position: absolute;
     content: "";
     background-color: #F7E300;
@@ -81,20 +81,18 @@ p{
     height: 3px;
     transition: 0.3s ease all;
   }
-  .linkItem:hover::after {
+  .linkItem:hover::after {  
     width: 100%;
   }
   .buttonMenu{
-    z-index: 200;
-    width: 40px;
-    height: 40px;
+    
     border: none;
     display: flex; 
     background: none;
     flex-direction: column; /*pondra un span debajo del otro*/
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
+    float:right;
+    margin-right: 30px;
   }
   .buttonMenu span{
     width: 37px;
@@ -104,7 +102,7 @@ p{
     background: #F7E300;
     border-radius: 3px;
     transform-origin: 4px 0px;
-    transition: all .2s linear; /*creamos la linea debajo de cada link*/
+    transition: all .2s linear; 
   }
   /*Con los span dibujamos la x para cerrar*/
   .buttonMenu.close span {
@@ -113,22 +111,24 @@ p{
     background: #127E6E;
   }
 
-  .buttonMenu.close span:nth-child(2){
+  .buttonMenu.close span:nth-child(2){ /*seleccionamos el span que necesitamos por su posicion */
     transform: rotate(-45deg) translate(-8px, 5px);
   }
   .buttonMenu.close span:nth-child(3){
     display: none;
   }
-  @media screen and (min-width:760px) {
+  @media all and (min-width:768px) {
     .buttonMenu{
       display: none;
     }
 
       .mainNav{
-        position: static;
-        margin-left: 0;
-        flex-basis: 70%;
-        height: 100%;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -100%;
+      
       }
 
       .navLinks{
@@ -136,7 +136,6 @@ p{
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: space-around;
         background: #127E6E;
       }
 
@@ -160,17 +159,19 @@ header {
     width: 100%;
     height: 50px;
     background-color: #127E6E;
+    background-position: center center;
     display: flex;
 }
 
 
 
 body{
-    background: url(css/fondo_pokebook.jpeg);
+    background: url(css/fondo_pokebook.jpeg) no-repeat;
     width:100% ;
     height: 100%;
     background-repeat:no-repeat;
     background-size: cover;
+    background-position: center center;
 }
 /*Página1 - Home*/
 
@@ -253,7 +254,7 @@ body{
 
 #namePokemon{
     color: #074d40;
-    font-family: bebas Neue;
+    font-family: 'Bebas Neue', cursive;
     font-size: 200%;
 }
 
