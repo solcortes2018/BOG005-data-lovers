@@ -2,7 +2,7 @@
 
 h1 {
     font-family: 'Bebas Neue', cursive;
-    font-size: 60px;
+    font-size: 30px;
     padding: 2%;
     margin-left: auto;
     margin-right: auto;
@@ -23,30 +23,63 @@ p{
     font-size: 130%;
 }
 
-.mainHeader{
+#enterHere {
+  background-color: #127E6E;
+  color: aliceblue;
+  font-size: 20px;
+  padding: 15px;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-radius: 50px;  
+  border-color: aliceblue;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.absolutePageHome {
   width: 100%;
+  height: 100hv;
+  right: 0;
+  position: absolute;
+  margin-top: 10%;
+}
+
+#videoContainer {
+  position: relative;
+}
+
+video-videoContainer {
+  top:70px;
+  left:0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+
+
+}
+
+.mainHeader{
   height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 0.4rem;
-    background-color: #127E6E;
+  display: flex;
+  align-items: center;
+  padding: 0 0.4rem;
+  background-color: #127E6E;
   }
   .mainLogo{
-    block-size:70px;
+    block-size:40px; 
     margin-left: auto;
     margin-right: auto;
-    justify-content: space-evenly;
   }
   .mainNav{
     position: fixed;
-    top: 0;
+    top: 70px;
     left: 0;
-    height: 100vh;
+    height: 180px;
     width: 100%;
     margin-left: -100%;
-    transition: all .2s linear;
-    background-color: rgba(57, 223, 145, 0.7);;
+    transition: all .3s linear;
+    background-color: #127E6E;
     z-index: 100;
     line-height: 55px;
     float: right;
@@ -58,10 +91,7 @@ p{
     background-color: #127E6E;
     display: flex;
     flex-direction: column;
-    width: 70%;
-    height: 100%;
-    align-items: center;
-    justify-content: flex-start;
+    height: 70px;
   }
   .linkItem{
     color: #F7E300;
@@ -70,8 +100,9 @@ p{
     font-family:'Montserrat', sans-serif;
     position: relative;
     justify-content: right;
+    padding-left: 30px;
   }
-  .linkItem::after {/*creamos la linea debajo de cada link*/
+  .linkItem::after {
     position: absolute;
     content: "";
     background-color: #F7E300;
@@ -81,18 +112,20 @@ p{
     height: 3px;
     transition: 0.3s ease all;
   }
-  .linkItem:hover::after {  
+  .linkItem:hover::after {
     width: 100%;
   }
   .buttonMenu{
-    
+    z-index: 200;
+    width: 40px;
+    height: 40px;
     border: none;
-    display: flex; 
+    display: flex;
     background: none;
     flex-direction: column; /*pondra un span debajo del otro*/
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    float:right;
-    margin-right: 30px;
   }
   .buttonMenu span{
     width: 37px;
@@ -102,7 +135,7 @@ p{
     background: #F7E300;
     border-radius: 3px;
     transform-origin: 4px 0px;
-    transition: all .2s linear; 
+    transition: all .2s linear; /*creamos la linea debajo de cada link*/
   }
   /*Con los span dibujamos la x para cerrar*/
   .buttonMenu.close span {
@@ -111,32 +144,35 @@ p{
     background: #127E6E;
   }
 
-  .buttonMenu.close span:nth-child(2){ /*seleccionamos el span que necesitamos por su posicion */
+  .buttonMenu.close span:nth-child(2){
     transform: rotate(-45deg) translate(-8px, 5px);
   }
   .buttonMenu.close span:nth-child(3){
     display: none;
   }
-  @media all and (min-width:768px) {
+  @media screen and (min-width:760px) {
     .buttonMenu{
       display: none;
     }
 
       .mainNav{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        top: 80px;
-        left: -100%;
-      
+        position: static;
+        margin-left: 0;
+        flex-basis: 70%;
+        height: 100%;
+      }
+
+      .mainLogo{
+        block-size:60px; 
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .navLinks{
         width: 100%;
         flex-direction: row;
-        flex-wrap: wrap;
         align-items: center;
-        background: #127E6E;
+        justify-content:end;
       }
 
       .linkItem{
@@ -145,6 +181,32 @@ p{
         margin-right: 2rem;
       }
 
+      h1 {
+        font-family: 'Bebas Neue', cursive;
+        font-size: 60px;
+        padding: 2%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #enterHere {
+        background-color: #127E6E;
+        color: aliceblue;
+        font-size: 30px;
+        padding: 20px;
+        padding-right: 80px;
+        padding-left: 80px;
+        border-radius: 50px;  
+        border-color: aliceblue;
+        font-family: 'Montserrat', sans-serif;
+      }
+    
+      .absolutePageHome {
+        right: 0;
+        position: absolute;
+        margin-top: 10%;
+      }
+    
     }
 .selectorBox{
   justify-content: space-around;
@@ -155,57 +217,27 @@ p{
   margin: 2.5rem 1rem 2.5rem 1rem;
 }
 
-header {
-    width: 100%;
-    height: 50px;
-    background-color: #127E6E;
-    background-position: center center;
-    display: flex;
-}
-
-
-
 body{
-    background: url(css/fondo_pokebook.jpeg) no-repeat;
-    width:100% ;
-    height: 100%;
-    background-repeat:no-repeat;
-    background-size: cover;
-    background-position: center center;
+    background: url(css/fondo_pokebook.jpeg);
+    background-repeat:
+    no-repeat;
+    background-size: 100% 100%;
 }
+
 /*Página1 - Home*/
 
 .containerOne{
     display: block;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left:
+    auto;
+    margin-right:
+    auto;
     text-align: center;
 }
 
-#enterHere {
-  background-color: #127E6E;
-  color: aliceblue;
-  font-size: 30px;
-  padding: 20px;
-  padding-right: 80px;
-  padding-left: 80px;
-  border-radius: 50px;  
-  border-color: aliceblue;
-  font-family: 'Montserrat', sans-serif;
-}
-.absolutePageHome {
-    width: 100%;
-    height: 100%;
-    right: 0;
-    position: absolute;
-    margin-top: 10%;
-}
 
 
 
-#wallpaper1 {
-    width: 100% min-content;
-}
 
 #pag1Sec2 {
     overflow: hidden;
@@ -254,7 +286,7 @@ body{
 
 #namePokemon{
     color: #074d40;
-    font-family: 'Bebas Neue', cursive;
+    font-family: bebas Neue;
     font-size: 200%;
 }
 

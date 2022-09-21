@@ -1,9 +1,9 @@
 
 import pokemon from './data/pokemon/pokemon.js'
-import data from './data/pokemon/pokemon.js';
+
 
 //funcion ordenar alfabeticamente
-export const sortDataA = (data) => {
+export const sortDataA = (data) => {  //ascendente
   let dataOrder = [...data]
   // console.log(data)
   dataOrder.sort((a, b) => {
@@ -18,7 +18,7 @@ export const sortDataA = (data) => {
   return dataOrder
 };
 
-export const sortDataZ = (data) => {
+export const sortDataZ = (data) => {  //descendente
   let dataOrder = [...data];
   dataOrder.sort((a, b) => {
     if (a.name == b.name) {
@@ -40,7 +40,7 @@ export const filterByType = (data, typeFilter) => {
   const filterPokemon= data.filter(function (dataPokemon) {
     return (dataPokemon.type).includes(typeFilter)
   })
-  console.log(typeFilter)
+ // console.log(typeFilter)
   return filterPokemon; 
 }
 
@@ -73,7 +73,7 @@ export const pokemonSmall = smallPokemon (pokemon.pokemon);
 
 //funcion ordenar por peso
 
-export const sortHeavier = (data) => {
+export const sortHeavier = (data) => { 
   let dataOrder = [...data];
   dataOrder.sort((a, b) => {
     if (a.size.weight == b.size.weight) {
